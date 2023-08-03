@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Hotel Lux</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navigation-wrap navbar py-1">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="logo de la imagen" class="img-fluid">
+                    <span>Hotel Lux</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="menú hamburguer">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="true" href="#home">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#certificados">Ubicación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#technologies">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="home">
+
+        <section class="sectionVideo">
+            <video src="vd/video.mp4" type="video/mp4" autoplay muted loop></video>
+
+            <div class="container boxContent">
+
+                <h1 class="wow animate__animated animate__backInLeft">¡Sumérgete en el Paraíso!</h1>
+                <p class="wow animate__animated animate__backInRight">Bienvenido al Hotel Lux</p>
+                <a href="#nosotros">Empezar <i class="fa-solid fa-chevron-right icon"></i></a>
+            </div>
+        </section>
+
+
+        <section class="container-fluid">
+            <div class="booking-form">
+                <h2 class="text-center">Reserva</h2>
+                <label for="destino">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Destino</option>
+                        <option value="1">San Juan Del Sur</option>
+                        <option value="2">Isla de Ometepe</option>
+                        <option value="3">Granada</option>
+                    </select>
+                </label>
+
+                <label for="check-in">Check-in:</label>
+                <input type="date" id="check-in">
+
+                <label for="check-out">Check-out:</label>
+                <input type="date" id="check-out">
+
+                <label for="huespedes">Huéspedes:</label>
+                <input type="number" id="huespedes" min="1">
+
+                <label for="promo-code">Código de promoción:</label>
+                <input type="text" id="promo-code">
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn-confirm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Verificar
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Ups!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Lo sentimos, no tenemos reservaciones en esa fecha.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion accordion-flush mt-2" id="accordionFlushExample">
+                    <div class="accordion-item text-center">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                <div class="row text-center columna-button">
+                                    <div class="col-lg-4">
+                                        <i class="fa-solid fa-sack-dollar"></i>
+                                        <p>Mejor Precio Garantizado</p>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <i class="fa-solid fa-plane-slash"></i>
+                                        <p>Cancelación flexible</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <i class="fa-solid fa-headset"></i>
+                                        <p>Atención al cliente 24/7</p>
+                                    </div>
+                                    <div class="container flecha p-2">
+                                        <i class="fa-solid fa-arrow-down"></i>
+                                    </div>
+
+                                </div>
+                            </button>
+
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="row text-center columna-button">
+                                    <div class="col-lg-4">
+                                        <p>Nuestra página web y app siempre tendrán las mejores tarifas de Hotel Lux</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p>Reserva con cancelación
+                                            flexible para tu tranquilidad.</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p>Atención al cliente 24/7</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="nosotros" class="sectionOne container-fluid py-5">
+
+            <div class="container text-center">
+                <button id="theme-toggle-button">Cambiar tema</button>
+                <h2>Destino único y lujoso</h2>
+                <p>
+                    Desde el momento en que pises nuestro majestuoso hotel, te envolverá una sensación de
+                    grandiosidad. Nuestro equipo de personal altamente capacitado estará a tu disposición para
+                    asegurarse de que cada momento de tu estancia sea inolvidable. Nos enorgullecemos de anticipar tus
+                    necesidades y superar tus expectativas.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="container-fluid py-5 sectionTwo">
+            <div class="container">
+            </div>
+        </section>
+
+        <section id="servicios" class="container-fluid py-5 sectionGallery">
+            <div class="container text-center">
+                <div class="alojamiento-text mb-3">
+                    <h2>Alojamiento</h2>
+                    <p>
+                        Tenemos algo para todos: suites para viajeros consentidos, dormitorios y hamacas para personas
+                        muy
+                        sociables. ¿Necesitas un aventón? Reserva un servicio de traslado para que tus viajes
+                        transcurran
+                        sin problemas.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 pb-3 mb-5 mt-3 image-container">
+                        <h4>Parque Acuático</h4>
+                        <a href="img/galery1.jpg" data-fancybox="gallery" data-caption="Foto café caliente">
+                            <!-- w-100 = imagen siempre tenga un ancho del 100% y ancho de 100 para que esten alineadas y del mismo tamaño-->
+                            <img src="img/galery1.jpg" alt="Foto cafe caliente" class="img-fluid rounded-4 w-100 h-100">
+                            <div class="text-overlay text-center">
+                                <p>Disponible general</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 pb-3 mb-5 mt-3 image-container">
+                        <h4>Cabañas recreativas</h4>
+                        <a href="img/galery2.jpg" data-fancybox="gallery" data-caption="Foto sirviendo café">
+                            <img src="img/galery2.jpg" alt="Foto sirviendo cafe"
+                                class="img-fluid rounded-4 w-100 h-100">
+                            <div class="text-overlay">
+                                <p>Disponible general</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 pb-3 mb-5 mt-3 image-container">
+                        <h4>Espacios exclusivos VIP</h4>
+                        <a href="img/galery3.jpg" data-fancybox="gallery" data-caption="Foto sosteniendo una taza café">
+                            <img src="img/galery3.jpg" alt="Foto sosteniendo una taza de cafe"
+                                class="img-fluid rounded-4 w-100 h-100">
+                            <div class="text-overlay">
+                                <p>Disponible solo pase VIP</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 pb-3 mb-5 mt-3 image-container">
+                        <h4>Hermosas vistas al mar</h4>
+                        <a href="img/galery3.jpg" data-fancybox="gallery" data-caption="Foto sosteniendo una taza café">
+                            <img src="img/galery4.jpg" alt="Foto sosteniendo una taza de cafe"
+                                class="img-fluid rounded-4 w-100 h-100">
+                            <div class="text-overlay">
+                                <p>Disponible general</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        </section>
+
+        <!--Carousel-->
+        <section class="container-fluid sectionCarousel">
+            <div id="carousel1" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!--Slide 1-->
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <div class="container">
+                            <h2>San Juan del Sur</h2>
+                            <div class="line"></div>
+                            <p>
+                                San Juan del Sur es un pintoresco y encantador pueblo costero ubicado en la región sur
+                                de Nicaragua, en la costa del Pacífico. Conocido por sus hermosas playas, ambiente
+                                relajado y actividades emocionantes, San Juan del Sur se ha convertido en uno de los
+                                destinos turísticos más populares en Nicaragua.
+                            </p>
+                            <a href="#nosotros">Ver más</a>
+                        </div>
+                    </div>
+                    <!--Slide 2-->
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="container">
+                            <h2>El lugar perfecto</h2>
+                            <div class="line"></div>
+                            <p> Sus playas, bordeadas de palmeras y rocas, ofrecen un escenario ideal para los amantes
+                                del sol y el mar. </p>
+                        </div>
+                    </div>
+                    <!--Slide 3-->
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="container">
+                            <h2>Para los amantes del Surf</h2>
+                            <div class="line"></div>
+                            <p>Desde las olas perfectas para surfear en Playa Maderas hasta las tranquilas aguas para
+                                nadar en Playa Hermosa, hay una playa para cada tipo de viajero.</p>
+                            <a href="#slogan">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="container py-5 sectionTestimonios">
+            <h2 class="text-center pb-5">Testimonios</h2>
+            <div class="owl-carousel">
+                <div class="containerSlider">
+                    <div class="sliderContent">
+                        <img src="img/testimonio1.jpg" class="testimonial-img img-fluid" alt="Testimonio uno">
+                        <h3>Javier Martínez</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>
+                            <i class="fa-solid fa-quote-left"></i>
+                            ¡El café es simplemente asombroso! Cada sorbo es una explosión de
+                            sabor y aroma. Nunca había probado un café tan delicioso. Definitivamente, se ha
+                            convertido en mi marca favorita de café para disfrutar de una taza de café perfecta en
+                            un día tan cansado.
+                            <i class="fa-solid fa-quote-right"></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="containerSlider">
+                    <div class="sliderContent">
+                        <img src="img/testimonio2.jpg" class="testimonial-img img-fluid" alt="Testimonio dos">
+                        <h3>Alejandro Lopez</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>
+                            <i class="fa-solid fa-quote-left"></i>
+                            Después de probar este café, no puedo volver a los cafés mediocres. La calidad de los
+                            granos utilizados es evidente en cada taza. Es tan sabroso que me hace sentir como si
+                            estuviera en una cafetería de alto nivel en cada sorbo. Si eres un amante del café,
+                            definitivamente debes probarlo.
+                            <i class="fa-solid fa-quote-right"></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="containerSlider">
+                    <div class="sliderContent">
+                        <img src="img/testimonio3.jpg" class="testimonial-img img-fluid" alt="Testimonio tres">
+                        <h3>Maria Gonzales</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>
+                            <i class="fa-solid fa-quote-left"></i>
+                            Como amante del café, puedo decir con total seguridad que este café es excepcional. Su
+                            sabor suave y equilibrado me cautivó desde el primer sorbo. Además, el personal es
+                            amable y conocedor, lo que hace que la experiencia sea aún más agradable. No puedo
+                            recomendarlo lo suficiente.
+                            <i class="fa-solid fa-quote-right"></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="containerSlider">
+                    <div class="sliderContent">
+                        <img src="img/testimonio4.jpg" class="testimonial-img img-fluid" alt="Testimonio cuatro">
+                        <h3>Sofía Ramírez</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>
+                            <i class="fa-solid fa-quote-left"></i>
+                            Soy bastante exigente con mi café, pero este lugar realmente me impresionó. El café está
+                            tostado a la perfección, lo que le brinda un sabor suave y rico. Además, tienen una
+                            amplia variedad de opciones, desde espresso hasta café con leche, para satisfacer todos
+                            los gustos. Sin duda, volveré una y otra vez.
+                            <i class="fa-solid fa-quote-right"></i>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
+        <footer>
+            <div class="container-fluid containerFooter">
+                <div class="container text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 pt-3">
+                                <h5>Compañia</h5>
+                                <ul class="list-group">
+                                    <a href="https://www.24hourfitness.com/company/about_us/" target="_blank">Sobre
+                                        Nosotros</a>
+                                    <a href="https://careers.24hourfitness.com/?vs=2668" target="_blank">Empleos</a>
+                                    <a href="https://www.24hourfitness.com/company/careers/my24_hr/"
+                                        target="_blank">Sitio en mapa</a>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-4 pt-3">
+                                <h5>Recursos</h5>
+                                <ul class="list-group">
+                                    <a href="https://www.24hourfitness.com/company/careers/my24_hr/"
+                                        target="_blank">Contacta con nosotros</a>
+                                    <a href="https://www.24hourfitness.com/company/careers/my24_hr/"
+                                        target="_blank">Miembros del equipo</a>
+                                    <a href="https://www.24hourfitness.com/login.html#/" target="_blank">Miembros del
+                                        servicio</a>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-4 pt-3">
+                                <h5>Nuestra política</h5>
+                                <ul class="list-group">
+                                    <a href="https://www.24hourfitness.com/company/policies/terms_of_use"
+                                        target="_blank">Términos y condiciones</a>
+                                    <a href="https://www.24hourfitness.com/company/policies/member_policies"
+                                        target="_blank">Politicas de miembros</a>
+                                    <a href="https://www.24hourfitness.com/company/policies/privacy_policy"
+                                        target="_blank">Politica de privacidad del sitio web</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </footer>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/fancybox.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/00ce13a4f0.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
